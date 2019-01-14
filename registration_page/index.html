@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<style>
+		input[type='text']:focus, input[type='password']:focus, input[type='email']:focus, input[type='number']:focus, select:focus{
+				background-color:lightblue;
+			}
+	</style>
+</head>
+<body>
+		<h2 id="h1">Registration Form</h2>
+		<div class="register">
+			<h2 style="font-family: 'Mali', cursive;">Register Here</h2><hr>
+			<form  method="post" action='#' onsubmit="return validation()">
+				
+				<div class="form-group">
+					<label style="font-family: 'Mali', cursive;"><i class="fa fa-user text-white"></i> First Name: </label><br>
+					<input type="text" name="fuser" id="fuser" autocomplete="off" placeholder="Enter First Name" required><br>
+					<span id="fusername" class="text-white font-weight-bold"></span>
+				</div>
+				
+				<div class="form-group">
+					<label style="font-family: 'Mali', cursive;"><i class="fa fa-user text-white"></i> Last Name: </label><br>
+					<input type="text" name="luser" id="luser" autocomplete="off" placeholder="Enter Last Name" required><br>
+					<span  id="lusername" class="text-white font-weight-bold"></span>
+				</div>
+				
+				<div class="form-group">
+					<label style="font-family: 'Mali', cursive;"><i class="fa fa-phone text-white"></i> Mobile Number :</label><br>
+					<select id="ph">
+						<option>+91</option>
+						<option>Others</option>
+					</select>
+					<input type="number" placeholder="Enter mobile number" name="mobile" id="mobileNumber" autocomplete="off" required><br>
+					<span  id="mobile" class="text-white font-weight-bold"></span>
+				</div>
+				
+				<div class="form-group">
+					<label style="font-family: 'Mali', cursive;"><i class="fa fa-home text-white"></i> Address :</label><br>
+					<input type="text" placeholder="Enter your address" name="address" id="address" autocomplete="off" required>
+					<span  id="addresss" class="text-white font-weight-bold"></span>
+				</div>
+
+				<div class="form-group">
+					<label style="font-family: 'Mali', cursive;"><i class="fa fa-envelope text-white"></i> Email :</label><br>
+					<input type="email" placeholder="Enter your email" name="email" id="email" autocomplete="off" required>
+					<span  id="emails" class="text-white font-weight-bold"></span>
+				</div>
+
+				<div class="form-group">
+					<label style="font-family: 'Mali', cursive;"><i class="fa fa-lock text-white"></i> Password :</label><br>
+					<input type="password" placeholder="Enter your password" name="pass" id="pass" autocomplete="off" required>
+					<span  id="passs" class="text-white font-weight-bold"></span>
+				</div>
+
+				<div class="form-group">
+					<label style="font-family: 'Mali', cursive;"><i class="fa fa-lock text-white"></i> Re-enter Password :</label><br>
+					<input type="password" placeholder="Re-enter your password" name="conpass" id="conpass" autocomplete="off" required>
+					<span  id="conpasss" class="text-white font-weight-bold"></span>
+				</div>
+
+				<div>
+					<label style="font-family: 'Mali', cursive;"><i class="fa fa-suitcase text-white"></i> Professin :</label><br>
+					<select  name="prof" id="profession">
+						<option>Choice any one</option>
+						<option>Teacher</option>
+						<option>Business Man</option>
+						<option>Service Man</option>
+						<option>Freelancer</option>
+						<option>Artist</option>
+						<option>Student</option>
+						<option>Others</option>
+					</select>
+				</div>
+
+				<label style="font-family: 'Mali', cursive;"><i class="fa fa-flag text-white"></i> Nationality :</label><br>
+				<select name="nationality" id="nation">
+					<option>India</option>
+					<option>China</option>
+					<option>US</option>
+					<option>Japan</option>
+					<option>Russia</option>
+					<option>Nepal</option>
+					<option>Bhutan</option>
+					<option>Sri Lanka</option>
+					<option>Others</option>
+				</select><br><br>
+
+					<label style="font-family: 'Mali', cursive;"><i class="fa fa-lock text-white"></i> Security Question</label><br>
+					<select name="question" id="nation">
+						<option>What was your childhood nickname?</option>
+						<option>What is the name of your favorite childhood friend?</option>
+						<option>In what city or town did your mother and father meet?</option>
+						<option>What is your favorite movie?</option>
+						<option>What is the first name of the boy or girl that you first kissed?</option>
+					</select><br><br>
+					<input type="text" class="form-control" placeholder="Enter Answer" id="name" autocomplete="off">
+
+
+				<label style="font-family: 'Mali', cursive;"><i class="fa fa-male text-white"></i> Gender :</label><br>
+				<select name="gender" id="nation" name="gender">
+				<option>Male</option>
+				<option>Female</option>
+				<option>Others</option>
+				</select><br><br>
+
+
+				<input type="submit" name="submit" value="submit" class="btn btn-success" id="sub">
+				<a href="../index.html" id="btn-full">Back to home</a>
+			</form>
+		</div>
+
+		<script>
+			function validation(){
+
+				
+				var fuser = document.getElementById('fuser').value;
+				var luser = document.getElementById('luser').value;
+				var mobileNumber = document.getElementById('mobileNumber').value;
+				var address = document.getElementById('address').value;
+				var email = document.getElementById('email').value;
+				var pass = document.getElementById('pass').value;
+				var conpass = document.getElementById('conpass').value;
+
+				if((fuser.length <=2) || (fuser.length > 15)){
+				document.getElementById('fusername').innerHTML = "**First Name must be between 2 and 15";
+
+				return false; 
+			}
+			if(!(fuser.length <=2) || (fuser.length > 15)){
+				document.getElementById('fusername').innerHTML = "<style : display : none; ></style>";
+			}
+
+
+
+
+			if((luser.length <=2) || (luser.length > 15)){
+				document.getElementById('lusername').innerHTML = "**Last name must be between 2 and 20";
+
+				return false; 
+			}
+			if(!(luser.length <=2) || (luser.length > 15)){
+				document.getElementById('lusername').innerHTML = "<style : display : none; ></style>";
+			}
+
+
+
+
+
+			if(mobileNumber.length!=10){
+				document.getElementById('mobile').innerHTML = "**Mobile number must be 10 digit";
+
+				return false;
+			}
+			if(!mobileNumber.length!=10){
+				document.getElementById('mobile').innerHTML = "<style : display : none; ></style>";
+			}
+
+
+
+
+			if((address.length<5) || (address.length>40)){
+				document.getElementById('addresss').innerHTML = "**Address must be between 5 and 40";
+
+				return false;
+			}
+			if(!(address.length<5) || (address.length>40)){
+				document.getElementById('addresss').innerHTML = "<style : display : none; ></style>";
+			}
+
+
+
+
+			if(email.charAt(email.length-4)!='.'){
+				document.getElementById('emails').innerHTML = "**Invalid email";
+
+				return false;
+			}
+			if(!email.charAt(email.length-4)!='.'){
+				document.getElementById('emails').innerHTML = "<style : display : none; ></style>";
+			}
+
+
+
+
+			if((pass.length<5) || (pass.length>20)){
+				document.getElementById('passs').innerHTML = "**Invalid Password";
+
+				return false;
+			}
+			if(!(pass.length<5) || (pass.length>20)){
+				document.getElementById('passs').innerHTML = "<style : display : none; ></style>";
+			}
+
+
+
+
+			if(pass != conpass){
+				document.getElementById('conpasss').innerHTML = "**Password not match";
+
+				return false;
+			}
+			if(pass == conpass){
+				document.getElementById('conpasss').innerHTML = "<style : display : none; ></style>";
+			}
+		}
+	</script>
+</body>
+</html>
